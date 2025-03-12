@@ -1,101 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Drag and Drop</title>
-    <link rel="stylesheet" href="/16°Drag-Drop/styles.css">
-    <script src="https://kit.fontawesome.com/41f7df564c.js" crossorigin="anonymous"></script>
-    <script src="/16°Drag-Drop/script.js" defer></script>
-</head>
-<body>
+    <link rel="stylesheet" href="./styles.css" />
+    <script
+      src="https://kit.fontawesome.com/41f7df564c.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
     <template id="create-item">
-        <div class="desplazar-hacia-abajo">
-            <div class="add-item-container">
-                <div id="add-item-input" class="add-item" contenteditable="true"></div>
-            </div>
+      <div class="desplazar-hacia-abajo">
+        <div class="add-item-container">
+          <div
+            id="add-item-input"
+            class="add-item"
+            contenteditable="true"
+          ></div>
         </div>
+      </div>
     </template>
     <template id="save-item">
-        <div id="save-item-button" class="save-item-button">Save Item</div>
+      <div id="save-item-button" class="save-item-button">Save Item</div>
     </template>
     <template id="list">
-        <li draggable="true" contenteditable="true"><span contenteditable="false"><i class="fa-solid fa-xmark"></i></span></li>
+      <li draggable="true" contenteditable="true">
+        <span contenteditable="false"><i class="fa-solid fa-xmark"></i></span>
+      </li>
     </template>
 
     <div class="background-img"></div>
     <header>
-        <h2 class="title">Kanbad Board</h2>
+      <h2 class="title">Kanbad Board</h2>
     </header>
     <main>
-        <section id="backlog" class="backlog">
-            <div class="section-title center-elements">
-                <p>Backlog</p>
-            </div>
-            <div class="scroll-content">
-                <ul>
-                    <!-- <li contenteditable="true">testing <span contenteditable="false"><i class="fa-solid fa-xmark"></i></span></li>
-                    <li contenteditable="true">testing <span><i class="fa-solid fa-xmark"></i></span></li>
-                    <li contenteditable="true">testing <span><i class="fa-solid fa-xmark"></i></span></li> -->
-                </ul>
-            </div>
-            <div class="buttons-container">
-                <button class="add-item-button">+Add Item</button>
-            </div>
-        </section>
-        <section id="progress" class="progress">
-            <div class="section-title center-elements">
-                <p>Progress</p>
-            </div>
+      <section id="backlog" class="backlog">
+        <div class="section-title center-elements">
+          <p>Backlog</p>
+        </div>
+        <div class="scroll-content">
+          <ul></ul>
+        </div>
+        <div class="buttons-container">
+          <button class="add-item-button">+Add Item</button>
+        </div>
+      </section>
+      <section id="progress" class="progress">
+        <div class="section-title center-elements">
+          <p>Progress</p>
+        </div>
 
-            <div class="scroll-content">
-                <ul>
-                    <!-- <li contenteditable="true">testing <span><i class="fa-solid fa-xmark"></i></span></li>
-                    <li contenteditable="true">testing <span><i class="fa-solid fa-xmark"></i></span></li>
-                    <li contenteditable="true">testing <span><i class="fa-solid fa-xmark"></i></span></li>
-                    <li>If your intention is to have one list or one list item, not to have bullets or numbers, you had better apply a class that might be used every time you need to remove bullets.
-    
-                        Here, we will have a class named "nolist" for ordered lists, which can be used anytime when needed in the future.
-                        
-                        You can also set the class to any of the list items  to have one or more bullet items not to have a bullet while keeping the other bullets unchanged.</li> -->
-                </ul>
-            </div>
-            <div class="buttons-container">
-                <button class="add-item-button">+Add Item</button>
-            </div>
-        </section>
-        <section id="complete" class="complete">
-            <div class="section-title center-elements">
-                <p>Complete</p>
-            </div>
-            <div class="scroll-content">
-                <ul>
-                    <!-- <li>testing</li>
-                    <li>testing</li>
-                    <li>testing</li>
-                    <li>Damn</li> -->
-                </ul>
-            </div>
-            <div class="buttons-container">
-                <button class="add-item-button">+Add Item</button>
-            </div>
-        </section>
-        <section id="on-hold" class="on-hold">
-            <div class="section-title center-elements">
-                <p>On Hold</p>
-            </div>
-            <div class="scroll-content">
-                <ul>
-                    <!-- <li>testing</li>
-                    <li>testing</li>
-                    <li>testing</li> -->
-                </ul>
-            </div>
-            <div class="buttons-container">
-                <button class="add-item-button">+Add Item</button>
-            </div>
-        </section>
+        <div class="scroll-content">
+          <ul></ul>
+        </div>
+        <div class="buttons-container">
+          <button class="add-item-button">+Add Item</button>
+        </div>
+      </section>
+      <section id="complete" class="complete">
+        <div class="section-title center-elements">
+          <p>Complete</p>
+        </div>
+        <div class="scroll-content">
+          <ul></ul>
+        </div>
+        <div class="buttons-container">
+          <button class="add-item-button">+Add Item</button>
+        </div>
+      </section>
+      <section id="on-hold" class="on-hold">
+        <div class="section-title center-elements">
+          <p>On Hold</p>
+        </div>
+        <div class="scroll-content">
+          <ul></ul>
+        </div>
+        <div class="buttons-container">
+          <button class="add-item-button">+Add Item</button>
+        </div>
+      </section>
     </main>
-</body>
+  </body>
 </html>
